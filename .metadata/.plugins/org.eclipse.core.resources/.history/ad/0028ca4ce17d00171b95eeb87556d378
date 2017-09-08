@@ -1,0 +1,30 @@
+package com.jdbc.Template;
+
+import com.andrew.smis.util.JdbcUtil;
+import com.sun.tools.corba.se.idl.PragmaEntry;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class Template {
+
+    public static void dmlUpdate(String sqlString, Object... params) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = com.andrew.smis.util.JdbcUtil.createConnection();
+            preparedStatement = connection.prepareStatement(sqlString);
+            for (int index = 0; index < params.length; index++){
+                preparedStatement.setObject(index + 1, params[index]);
+            }
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.closeConnection(connection, preparedStatement, null);
+        }
+    }
+
+
+}

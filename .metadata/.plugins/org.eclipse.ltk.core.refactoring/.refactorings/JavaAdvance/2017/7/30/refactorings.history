@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JavaAdvance/src/com/andrew/xmlTest/Dom/contacts.xml&apos; to &apos;contactsssssss.xml&apos;" description="Rename resource &apos;contacts.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/andrew/xmlTest/Dom/contacts.xml" name="contactsssssss.xml" stamp="1501297099260" updateReferences="true"/>
+</session>
